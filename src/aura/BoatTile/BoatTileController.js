@@ -21,6 +21,7 @@
             "long":component.get("v.boat.Geolocation__Longitude__s"),
             "label":component.get("v.boat.Name")
         });
+        //we set the params to the Map 
         mapEvent.fire();
     }
 })

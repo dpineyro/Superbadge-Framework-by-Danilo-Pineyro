@@ -1,5 +1,6 @@
 <aura:component description="BoatTile" implements="flexipage:availableForAllPageTypes">
     <aura:attribute name="boat" type="Boat__c"/>
+    <!-- we inherited the boat attribute since BoatSearchResuls -->
     <aura:attribute name="selected" type="Boolean" default="false"/>
     <aura:registerEvent name="boatSelect" type="c:BoatSelect"/>
     <aura:registerEvent name="boatSelected" type="c:BoatSelected"/>
@@ -13,4 +14,5 @@
             </div>
         </div>
     </lightning:button>
+    <!-- we create the Tile to display within lightning button   -->
 </aura:component>
