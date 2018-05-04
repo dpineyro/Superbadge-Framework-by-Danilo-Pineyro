@@ -13,10 +13,7 @@
                 console.log("Boatreview = " + response.getReturnValue());
                 component.set("v.boatReviews", response.getReturnValue());
                 console.log("Boatreview attribute = " + component.get("v.boatReviews"));
-                
-
             }
-            
             else if (state === "INCOMPLETE") {
                 // do something
             }
@@ -32,13 +29,6 @@
                 }
             }
         });
-
-        // optionally set storable, abortable, background flag here
-
-        // A client-side action could cause multiple events, 
-        // which could trigger other events and 
-        // other server-side action calls.
-        // $A.enqueueAction adds the server-side action to the queue.
         $A.enqueueAction(action);
     },
 })
