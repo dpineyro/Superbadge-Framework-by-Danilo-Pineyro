@@ -1,0 +1,18 @@
+{
+    "projectName": "Superbadge",
+    "username": "dpineyro@playful-goat-134256.com",
+    "id": "32ae8170-4f08-11e8-a144-cdf301d42023",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://playful-goat-134256-dev-ed.my.salesforce.com",
+    "workspace": "C:\\Users\\dpineyro\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "StaticResource"
+    ]
+}
