@@ -2,6 +2,7 @@
     onSearch: function (component,boatTypeId) {
         var action = component.get("c.getBoats");
         action.setParams({'boatTypeId':boatTypeId});
+        // i get the boats filtered
         action.setCallback(this, function (response) {
             var state = response.getState();
             if (state==='SUCCESS'){
@@ -10,5 +11,6 @@
             }
         })
         $A.enqueueAction(action);
+        //execute the action
     },
 })

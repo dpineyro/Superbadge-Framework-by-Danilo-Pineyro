@@ -9,5 +9,7 @@
     onBoatSelect: function (component, event, helper) {
         var boatId = event.getParam("boatId");
         component.set("v.selectedBoatId",boatId);
+        //I get the Id of the boat into the event attribute
+        //and then i set the attribute selectedBoatId
     },
 })
