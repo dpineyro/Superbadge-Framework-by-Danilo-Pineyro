@@ -1,19 +1,27 @@
 <aura:component controller="BoatSearchController" access="global" implements="flexipage:availableForAllPageTypes">
     <aura:attribute name="boatTypes" type="Object"/>
+     <!-- This attribute will contain the list of boats Types of the DropDownList --> 
     <aura:attribute name="boatTypeId" type="String"/>
+    <!--  It will be used to search and filter the list of results -->
     <aura:attribute name="createRecordIsSupported" type="Boolean" default="false"/>
+    <!--
+     if createRecordEvent exists or != null I set createRecordIsSupported attribute in true
+    -->
     <aura:registerEvent name="formsubmit" type="c:FormSubmit"/>
+    <!--  -->
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
-
+    <!--  -->
     <lightning:layout horizontalAlign="center">
         <lightning:select name="selectBoatType" value="{!v.boatTypeId}">
             <option value="">All types</option>
             <aura:iteration items="{!v.boatTypes}" var="type">
                 <option value="{!type.Id}" text="{!type.Name}"/>
             </aura:iteration>
+            <!-- I go through the list of BoatTypes and charged the dropdownlist -->
         </lightning:select>
         <lightning:button label="Search" class="slds-m-top_medium" variant="brand" onclick="{!c.onFormSubmit}"/>
         <aura:if isTrue="{!v.createRecordIsSupported}">
+        <!-- if I can create news records I will be able to see the new button  -->
             <lightning:button label="New" class="slds-m-top_medium" onclick="{!c.newBoat}" variant="neutral"/>
         </aura:if>
     </lightning:layout>

@@ -1,6 +1,5 @@
 ({
-	getBoatTypeNames : function(component) {
-        console.log("Helper started");
+	/*getBoatTypeNames : function(component) {
             var action = component.get("c.getBoatTypes");
 
             //add the callback behavior for when the response is received
@@ -38,5 +37,5 @@
             }
             this.displayToast(opts)
         }.bind(this));
-    },
+    },*/
 })
